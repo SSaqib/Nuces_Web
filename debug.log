@@ -1,0 +1,42 @@
+[0213/204945.188:ERROR:process_info.cc(118)] ReadProcessMemory bool __cdecl crashpad::(anonymous namespace)::ReadStruct(HANDLE, crashpad::WinVMAddress, T *) [T = crashpad::process_types::LDR_DATA_TABLE_ENTRY<crashpad::process_types::internal::Traits64>]: Invalid access to memory location. (0x3E6)
+[0213/204945.233:ERROR:process_info.cc(118)] ReadProcessMemory bool __cdecl crashpad::(anonymous namespace)::ReadStruct(HANDLE, crashpad::WinVMAddress, T *) [T = crashpad::process_types::LDR_DATA_TABLE_ENTRY<crashpad::process_types::internal::Traits64>]: Invalid access to memory location. (0x3E6)
+[0213/204945.887:ERROR:process_memory_win.cc(73)] ReadMemory at 0x3c000000769622ff of 132 bytes failed: Invalid access to memory location. (0x3E6)
+[0213/204945.888:ERROR:process_memory_win.cc(73)] ReadMemory at 0xfffffffffffffff0 of 132 bytes failed: Invalid access to memory location. (0x3E6)
+[0213/204945.889:ERROR:process_memory_win.cc(73)] ReadMemory at 0xffffffffffffffe0 of 132 bytes failed: Invalid access to memory location. (0x3E6)
+[0213/204945.890:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7696000076 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0213/204945.890:WARNING:pe_image_reader.cc(302)] could not read dos header from 
+[0213/204945.891:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7696000076 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0213/204945.891:WARNING:pe_image_reader.cc(302)] could not read dos header from 
+[0213/204945.893:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7696000076 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0213/204945.894:WARNING:pe_image_reader.cc(302)] could not read dos header from 
+[0213/204945.897:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7696000076 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0213/204945.897:WARNING:pe_image_reader.cc(302)] could not read dos header from 
+[0213/204945.899:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7696000076 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0213/204945.899:WARNING:pe_image_reader.cc(302)] could not read dos header from 
+[0213/204945.899:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7696000076 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0213/204945.899:WARNING:pe_image_reader.cc(302)] could not read dos header from 
+[0213/204945.947:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7696000076 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0213/204945.948:WARNING:pe_image_reader.cc(302)] could not read dos header from 
+[0213/204945.958:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7696000076 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0213/204945.958:WARNING:pe_image_reader.cc(302)] could not read dos header from 
+[0213/210713.741:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0213/211713.741:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0213/211713.741:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0213/212213.773:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0213/213713.775:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0213/215213.776:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0213/220713.814:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0213/222213.820:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0213/223713.822:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0213/225213.827:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0213/230713.833:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0213/232213.833:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0213/233713.835:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0213/235213.881:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0214/000713.883:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0214/002213.883:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0214/003719.405:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0214/005219.407:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0214/010719.408:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0215/155640.216:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0215/213243.415:ERROR:crash_report_database_win.cc(428)] unexpected header
