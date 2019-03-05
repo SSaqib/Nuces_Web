@@ -235,3 +235,13 @@
     border: 2px solid dodgerblue;
   }
    */
+
+   .myfooter,.temp,footer .glyphicon {
+    font-size: 20px;
+    position: absolute;
+    bottom:0;
+    top:120%;
+    width:100%;
+    color: #f4511e;
+    background-color: green;
+  }

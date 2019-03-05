@@ -11,7 +11,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="Footer-with-button-logo.css">
 
 
 
@@ -88,8 +88,10 @@
 
 <body>
 
+
+  <!-- Navbar -->
     <nav class="navbar navbar-expand-sm mynav fixed-top">
-        <a class="navbar-brand" href="#">Logo</a>
+       <img src="logo2.jpeg" alt="Logo" style="width:130px;height:100%; ">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon mycl1"></span>
         </button>
@@ -123,7 +125,7 @@
 
   
 
-
+<!-- Login -->
   <div id="id01" class="modal">
     
     <form class="modal-content animate myc1" action="/action_page.php">
@@ -188,26 +190,15 @@
      
     </form>
   </div>
-  
-  <script>
-  // Get the modal
-  var modal = document.getElementById('id01');
-  
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-      if (event.target == modal) {
-          modal.style.display = "none";
-      }
-  }
-  </script>
-<div id="demo" class="carousel slide" data-ride="carousel">
+
+<!-- <div id="demo" class="carousel slide" data-ride="carousel"> -->
 
 
 
 
 
 
-
+<!-- Sign Up -->
 
      <div id="signup" class="modal">
     
@@ -317,90 +308,49 @@
  -->
 
 
+<!--  <div class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p class="temp">Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p> 
+</footer> -->
 
 
-<!-- Footer -->
-<footer class="page-footer font-small blue pt-4">
-
-    <!-- Footer Links -->
-    <div class="container-fluid text-center text-md-left">
 
       <!-- Grid row -->
-      <div class="row">
-
-        <!-- Grid column -->
-        <div class="col-md-6 mt-md-0 mt-3">
-
-          <!-- Content -->
-          <h5 class="text-uppercase">Footer Content</h5>
-          <p>Here you can use rows and columns here to organize your footer content.</p>
-
+      <footer id="myFooter">
+        <div class="container"  >
+            <div class="row">
+                <div class="col-sm-3">
+                    <h2 class="logo"><a href="#"> LOGO </a></h2>
+                </div>
+                
+                <div class="col-sm-4">
+                    <h5>About us</h5>
+                    <ul>
+                        <li><a href="#">Company Information</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Help desk</a></li>
+                        <li><a href="#">Forums</a></li>
+                    </ul>
+                </div>
+               
+            </div>
         </div>
-        <!-- Grid column -->
+        <div class="footer-copyright myfooter2">
+            <p>Nuces Circle Â© 2019 Syed Saqib  360Dynamics.net - All Rights Reserved </p>
+        </div>
+    </footer>
+  
 
-        <hr class="clearfix w-100 d-md-none pb-3">
-
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
-
-            <!-- Links -->
-            <h5 class="text-uppercase">Links</h5>
-
-            <ul class="list-unstyled">
-              <li>
-                <a href="#!">Link 1</a>
-              </li>
-              <li>
-                <a href="#!">Link 2</a>
-              </li>
-              <li>
-                <a href="#!">Link 3</a>
-              </li>
-              <li>
-                <a href="#!">Link 4</a>
-              </li>
-            </ul>
-
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-3 mb-md-0 mb-3">
-
-            <!-- Links -->
-            <h5 class="text-uppercase">Links</h5>
-
-            <ul class="list-unstyled">
-              <li>
-                <a href="#!">Link 1</a>
-              </li>
-              <li>
-                <a href="#!">Link 2</a>
-              </li>
-              <li>
-                <a href="#!">Link 3</a>
-              </li>
-              <li>
-                <a href="#!">Link 4</a>
-              </li>
-            </ul>
-
-          </div>
-          <!-- Grid column -->
-
-      </div>
-      <!-- Grid row -->
-
-    </div>
-    <!-- Footer Links -->
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2018 Copyright:
-      <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-
-  </footer>
+ 
 </body>
 
 
