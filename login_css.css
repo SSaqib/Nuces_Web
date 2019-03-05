@@ -4,7 +4,7 @@
 
 
           /* Full-width input fields */
-          input[type=text], input[type=password] {
+          input[type=text], input[type=password],input[type=email]{
             width: 100%;
             padding: 12px 20px;
             margin: 8px 0;
@@ -194,6 +194,20 @@
          .mybtn{
            padding:6px 16px;
          }
+
+.mybtn2 {
+    background-color:#11275e;
+}
+
+.signupbtn {
+    background-color: green;
+}
+
+
+.mylink1 {
+    font-size: 25px;
+    
+}
 /* 
               
 .input-container {
