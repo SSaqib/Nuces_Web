@@ -50,9 +50,9 @@
 
           .html,body{
 
-            background-image: url('bg15.jpg') !important;
+           /*  background-image: url('bg15.jpg') !important;
             background-size: cover;
-            background-repeat: no-repeat;
+            background-repeat: no-repeat; */
             height: 100%;
             color:black;
           }
@@ -189,22 +189,56 @@
 
 
   
-  <div class="container" style="margin-top:30px">
+  <div class="container " style="margin-top:30px">
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-3">
   
-            <div class="card" style="width:400px">
-              <img class="card-img-top rounded-circle" src="profile.jpg" alt="Card image" style="height:70%;width:40%;margin:auto;">
-              <div class="card-body">
-                <h4 class="card-title">Syed Saqib</h4>
-                <p class="card-text">National University of Computing and Emerging Sciences</p>
-                <a href="#" class="btn btn-primary">See Profile</a>
-              </div>
+            <div class="card mydiv1" >
+                <img class="rounded-circle mx-auto d-block img-fluid" src="profile.jpg" alt="Card image" style="height: 150px;" >
+                <div class="card-body">
+                  <h3 class="card-title  text-center">Syed Saqib</h3>
+                  <p class="card-text  text-center">Student at National University of Computing and Emerging Sciences</p>
+                  <a href="#" class="btn btn-primary ">See Profile</a>
+                </div>
             </div>
-  <br>
+        </div>
+
+        <div class="col-sm-6 ">
+          <div class="mydiv1 p-3">
+            <div class="mydiv2">
+              <h5 class="mb-3">Create Post</h5>
+              <textarea class="form-control" rows="3" id="comment" placeholder="What's on your mind ?"></textarea>
+              <a href="#" class="btn pull-right btn-primary m-3">Post</a>
+              <i class="far fa-image myicon1 m-3" data-toggle="tooltip" data-placement="top" title="Upload an image"></i>
+            </div>
+          
+          </div>
+
+
+          <div class="mydiv1 p-4 my-4">
+            <div class="mydiv2">
+              <div>
+                <img src="profile.jpg" class="px-12 rounded-circle float-left postimage" alt="User">
+                <i class="fas fa-user-plus p-2 myicon2 float-right">Follow</i>
+                <h6 class="pl-2 my-0">Sheroz Ali</h6>
+                <p class="pl-2 postpara">Web Developer at 360Dynamics</p>
+               
+
+             </div>
+              <div class="friendpost">wadwad</div>
+              <a href="#" class="btn pull-right btn-primary m-3">Post</a>
+              <i class="far fa-image myicon1 m-3" data-toggle="tooltip" data-placement="top" title="Upload an image"></i>
+            </div>
+          
+          </div>
+      </div>
+        <div class="col-sm-3 "></div>
+        
+
+      </div>
 
         </div>
-    <div class="col-sm-8">
+    
       
       
       
@@ -218,7 +252,7 @@
       
       
       
-      </div></div>
+     
   
 </body>
 
