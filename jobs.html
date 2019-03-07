@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Nuces Web</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Footer-with-button-logo.css">
+    <link rel="stylesheet" href="profile.css">
+
+   
+
+
+
+    <link href="login_css.css" rel="stylesheet" type="text/css">
+  
+  
+    <style>
+        /* Make the image fully responsive */
+        .carousel-inner img {
+          width: 100%;
+          height: 100%;
+        }
+
+       nav.mynav{
+          background-color:#11275e;
+          color: white;
+          
+        }
+
+        .mynav a{
+          color:white;
+        }
+        
+        .mycl1{
+          color:white;
+          background-color:white;
+        }
+
+          li.nav-item:hover{
+            background-color:rgb(0, 45, 128);
+            border-radius:5px;
+          }
+
+          .html,body{
+
+           /*  background-image: url('bg15.jpg') !important;
+            background-size: cover;
+            background-repeat: no-repeat; */
+            height: 100%;
+            color:black;
+          }
+
+
+          @media only screen and (max-width: 900px) {
+                .modal-content,.modal {
+                  width:100%;
+                  padding:30px;
+                }
+              }
+
+
+              .myh1{
+                text-align: center;
+                color:white;
+              }
+
+              .mylabel1,.vl,.myb1{
+                color:white;
+              }
+
+              .myinput1{
+                background-color:rgb(196, 196, 199);
+                border-radius:4px;
+              }
+
+
+        </style>
+
+  
+  
+  
+  </head>
+
+
+<body>
+
+  
+  <nav class="navbar navbar-expand-sm  mynav">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Logo</a>
+
+
+    <form class="form-inline" action="/action_page.php">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+    
+    <!-- Links -->
+    <ul class="navbar-nav ml-auto">
+        
+
+         
+      
+
+
+
+
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Jobs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Network</a>
+      </li>
+  
+      <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+         Me
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Edit Profile</a>
+          <a class="dropdown-item" href="#">Link 2</a>
+          <a class="dropdown-item" href="#">Signout</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  
+  <div class="container">
+
+       
+            <div class="row">
+                    
+                 <div class="col-sm-3">
+                      
+                      <div class="card mydiv1" >
+                        <img class="rounded-circle mx-auto d-block img-fluid" src="profile.jpg" alt="Card image" style="height: 150px;" >
+                            <div class="card-body">
+                              <h3 class="card-title  text-center">Syed Saqib</h3>
+                                    <p class="card-text  text-center">Student at National University of Computing and Emerging Sciences</p>
+                                   <a href="#" class="btn btn-primary ">See Profile</a>
+                          </div>
+                      </div>
+                 </div>
+
+                 <div class="col-sm-8">
+                        <h1 class="text-center">Jobs Landing Page</h1>
+                        
+                        <div class="row">
+                                <div class="col-sm-10"> 
+                                    <input type="text" class="form-control" id="usr" placeholder="Looking for Job?">
+                                </div>
+                                <div class="col-sm-2">
+                                        <button type="button" class="btn mt-1 btn-outline-primary">Search</button>
+                                </div>
+                        </div>
+
+                         <div>
+                             <p>Filter by:</p>
+                             <div class="form-group">
+                                    <select class="form-control custom-select mb-3" name="city" id="selectcity">
+                                      <option selected>Select City</option>
+                                      <option>Lahore</option>
+                                      <option>Karachi</option>
+                                      <option>Islamabad</option>
+                                      <option>Peshawar</option>
+                                    </select>
+                            </div>
+                         </div>
+                 </div>
+                            
+                
+            </div>
+        
+  </div>
+
+
+</body>
+
+
+
+
+</html>
