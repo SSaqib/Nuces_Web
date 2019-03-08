@@ -82,6 +82,11 @@
               }
 
 
+
+              .menudropdown a{
+                color:black;
+              }
+
         </style>
 
   
@@ -112,7 +117,12 @@
 
 
 
+      
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
 
+     
 
       <li class="nav-item">
         <a class="nav-link" href="#">Jobs</a>
@@ -123,15 +133,26 @@
   
       <!-- Dropdown -->
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-         Me
-        </a>
-        <div class="dropdown-menu">
+       
+        
+        <button type="button" class="btn btn-primary nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Me
+          </button>
+      
+        <div class="dropdown-menu dropdown-menu-right menudropdown">
           <a class="dropdown-item" href="#">Edit Profile</a>
-          <a class="dropdown-item" href="#">Link 2</a>
+          <a class="dropdown-item" href="#">Invites<span class="badge badge-danger mx-2">4</span></a>
           <a class="dropdown-item" href="#">Signout</a>
         </div>
       </li>
+
+
+      
+
+
+
+
+
     </ul>
   </nav>
 

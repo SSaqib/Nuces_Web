@@ -81,6 +81,9 @@
               }
 
 
+              .menudropdown a{
+                color:black;
+              }
         </style>
 
   
@@ -91,49 +94,64 @@
 
 <body>
 
-  
-  <nav class="navbar navbar-expand-sm  mynav">
-    <!-- Brand -->
-    <a class="navbar-brand" href="#">Logo</a>
-
-
-    <form class="form-inline" action="/action_page.php">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-      <button class="btn btn-primary" type="submit">Search</button>
-    </form>
     
-    <!-- Links -->
-    <ul class="navbar-nav ml-auto">
+    <nav class="navbar navbar-expand-sm  mynav">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">Logo</a>
+    
+    
+        <form class="form-inline" action="/action_page.php">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-primary" type="submit">Search</button>
+        </form>
         
-
+        <!-- Links -->
+        <ul class="navbar-nav ml-auto">
+            
+    
+             
+          
+    
+    
+    
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+    
          
+    
+          <li class="nav-item">
+            <a class="nav-link" href="#">Jobs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Network</a>
+          </li>
       
-
-
-
-
-
-      <li class="nav-item">
-        <a class="nav-link" href="#">Jobs</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Network</a>
-      </li>
-  
-      <!-- Dropdown -->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-         Me
-        </a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Edit Profile</a>
-          <a class="dropdown-item" href="#">Link 2</a>
-          <a class="dropdown-item" href="#">Signout</a>
-        </div>
-      </li>
-    </ul>
-  </nav>
-
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+           
+            
+            <button type="button" class="btn btn-primary nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Me
+              </button>
+          
+            <div class="dropdown-menu dropdown-menu-right menudropdown">
+              <a class="dropdown-item" href="#">Edit Profile</a>
+              <a class="dropdown-item" href="#">Invites<span class="badge badge-danger mx-2">4</span></a>
+              <a class="dropdown-item" href="#">Signout</a>
+            </div>
+          </li>
+    
+    
+          
+    
+    
+    
+    
+    
+        </ul>
+      </nav>
 
 
 <!-- 
@@ -218,10 +236,17 @@
                         <div class="mydiv1 p-4 my-4">
                          
                             <div>
-                                  <img src="profile.jpg" class="px-12 rounded-circle float-left postimage" alt="User">
-                                  <i class="fas fa-user-plus p-2 myicon2 float-right">Follow</i>
-                                  <h6 class="pl-4 ml-4">Sheroz Ali</h6>
-                                  <p class="pl-4 postpara ml-4">Web Developer at 360Dynamics</p>
+                                  <div class="mr-4 pr-4">
+                                    <img src="profile.jpg" class="px-12 rounded-circle float-left postimage" alt="User">
+                                  </div>
+                                  <div>
+                                      <i class="fas fa-user-plus p-2 myicon2 float-right">Follow</i>
+                                  </div>
+                                 <div class="my-0 py-0 mx-4 px-4"> 
+                                   <h6 class="my-0 py-0 ">Sheroz Ali</h6>
+                                  <p class=" postpara  ">Web Developer at 360Dynamics</p>
+                                </div>
+                                 
                           </div>
                 
 
