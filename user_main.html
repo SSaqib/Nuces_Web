@@ -221,7 +221,7 @@
             </div>
         </div>
 
-        <div class="col-sm-6 ">
+        <div class="col-sm-6" id="postwrapper">
                 <div class="mydiv1 p-3">
                   <div class="mydiv2">
                     <h5 class="mb-3">Create Post</h5>
@@ -232,7 +232,7 @@
                 
                 </div>
 
-                <div class="friendpost">
+                <!-- <div class="friendpost">
                         <div class="mydiv1 p-4 my-4">
                          
                             <div>
@@ -260,7 +260,7 @@
 
                               <div>
                                 <figure class="figure my-2">
-                                  <img src="bg4.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                                  <img src="bg1.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
                                   <figcaption class="figure-caption text-left">A caption for the above image. Fake Text Very Sorry to say but your customer service is really bad. Even after complaining many times in last two months my problem is not solved. And still you people are mailing me that my problem is solved ? 
                                     Your customer service agent aur techinal team member just contacts me and tell me that your problem can not be solved because the internet speed is divided and affected by other customers in your area and they mark my problem as solved but the problem is still there unsolved.
                                     Really disappointing and sad.</figcaption>
@@ -283,7 +283,7 @@
 
 
 
-
+              
 
                 <div class="friendpost">
                     <div class="mydiv1 p-4 my-4">
@@ -322,7 +322,7 @@
                                   <a href="#" class="btn btn-primary btn-sm mx-2">Post</a>  
                               </div>
                    </div>
-            </div>
+                 </div> -->
 
 
       </div>
@@ -356,11 +356,160 @@
 </html>
 
 
-<script>
+<script type="text/javascript">
     $(document).ready(function(){
 
       $(".usercommenticon").click(function(){
         $(".usercomment").toggle(500);
+       alert(String(allposts[5].post_image));
       });
     });
+
+
+
+
+
+
+
+
+
+
+
+	
+  
+  function fetchData() {
+      
+     /*  var profile_shehroz = {
+      name : "Muhammad Shehroz",
+          description : "Expertise In Web Backend and Have 1 year Job Experience",
+          profile_img_source : "img_avatar1.png"
+    };
+  
+      var profile_saqib = {
+      name : "Syed Saqib",
+          description : "Expertise in Programming and Full Stack Development",
+          profile_img_source : "img_avatar1.png"
+    };
+  
+      var profiles = [profile_shehroz, profile_saqib]; */
+  
+
+
+
+
+
+
+
+      function  post (maker,dp,designation,text,image,image_caption,date,time){
+/*   post_maker = "saqib",
+  post_text= "hello my first post",
+  post_image= "bg1.jpg",
+  post_image_caption ="Image caption",
+  post_date="9/3/2019",
+  post_time="13:55" */
+
+  this.post_maker = maker;
+  this.post_maker_dp=dp;
+  this.post_maker_designation=designation;
+  this.post_text= text;
+  this.post_image= image;
+  this.post_image_caption =image_caption;
+  this.post_date=date;
+  this.post_time=time;
+}
+
+var post1= new post ("saqib","bg12.jpg","Student at FAST","Hello this is my first post","bg1.jpg","Test image caption","9/3/2019","13:55")
+var post2= new post ("sheroz","bg13.jpg","Student at LUMS","I am sheroz","bg2.jpg","Test image caption","9/3/2019","13:55")
+var post3= new post ("khan","bg14.jpg","Student at UET","KEsay ho bhai","bg6.jpg","Test image caption","9/3/2019","13:55")
+var post4= new post ("imran","bg15.jpg","Developer at Home","I am new to Nuces Circle","bg4.jpg","Test image caption","9/3/2019","13:55")
+var post5= new post ("major","bg8.jpg","Student at GCU","What a wonferful website","bg5.jpg","Test image caption","9/3/2019","13:55")
+
+
+var allposts= [post1,post2,post3,post4,post5];
+
+
+
+
+      allposts.forEach(function(post){
+    
+     var div1 = document.createElement("div");
+      div1.className = "friendpost";
+          // div.style.width = 400 + "px";
+
+        var div2 = document.createElement("div");
+        div2.className = "mydiv1 p-4 my-4";
+
+            var div3 = document.createElement("div");
+         
+                  var div3_1 = document.createElement("div");
+                  div3_1.className = "mr-4 pr-4";
+                    var img3_1_2 = document.createElement("img");
+                    img3_1_2.className = "px-12 rounded-circle float-left postimage";
+                    img3_1_2.setAttribute("alt","Display Picture");
+                    img3_1_2.setAttribute("src", post.post_maker_dp);
+
+                  var div3_2 = document.createElement("div");
+                  var i3_2_1 = document.createElement("i");
+                    i3_2_1.className="fas fa-user-plus p-2 myicon2 float-right";
+                    i3_2_1.innerHTML="Follow";
+
+                  var div3_3 = document.createElement("div");
+                  div3_3.className = "my-0 py-0 mx-4 px-4";
+                    var h6_3_3_1 = document.createElement("h6");
+                    h6_3_3_1.className = "my-0 py-0";
+                    h6_3_3_1.innerHTML=post.post_maker;
+                    var p_3_3_2 = document.createElement("p");
+                    p_3_3_2.className = "postpara";
+                    p_3_3_2.innerHTML=post.post_maker_designation;
+
+
+
+              var div4= document.createElement("div");
+              div4.className = "mt-4";
+                  var p4_1 = document.createElement("p");
+                  p4_1.innerHTML=post.post_text;
+
+              var div5= document.createElement("div");
+                  var figure5_1= document.createElement("figure");
+                  figure5_1.className = "figure my-2";
+                    var img5_1_1 = document.createElement("img");
+                    img5_1_1.className = "figure-img img-fluid rounded";
+                    img5_1_1.setAttribute("alt","Display Picture");
+                    img5_1_1.setAttribute("src",post.post_image);
+                    var figcaption5_1_2= document.createElement("figcaption");
+                    figcaption5_1_2.className = "figure-caption text-left";
+                    figcaption5_1_2.innerHTML=post.post_image_caption;
+
+
+        
+  
+
+          div1.appendChild(div2);
+          div2.appendChild(div3);
+
+          div3.appendChild(div3_1);
+          div3_1.appendChild(img3_1_2);
+          div3.appendChild(div3_2);
+          div3_2.appendChild(i3_2_1);
+          div3.appendChild(div3_3);
+          div3_3.appendChild(h6_3_3_1);
+          div3_3.appendChild(p_3_3_2);
+
+          div2.appendChild(div4);
+          div4.appendChild(p4_1);
+
+          div2.appendChild(div5);
+          div5.appendChild(figure5_1);
+          figure5_1.appendChild(img5_1_1);
+          figure5_1.appendChild(figcaption5_1_2);
+
+       
+
+          document.getElementById("postwrapper").appendChild(div1);
+  });
+  }
+  
+
+
+
 </script>

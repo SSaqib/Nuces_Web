@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+ 
+<div class="container" id="wrapper">
+    
+    <button onclick="fetchData()">Click</button>
+
+</div>  
+  
+<script type="text/javascript">
+	
+    function fetchData() {
+        
+        var profile_shehroz = {
+		    name : "Muhammad Shehroz",
+            description : "Expertise In Web Backend and Have 1 year Job Experience",
+            profile_img_source : "img_avatar1.png"
+	    };
+    
+        var profile_saqib = {
+		    name : "Syed Saqib",
+            description : "Expertise in Programming and Full Stack Development",
+            profile_img_source : "img_avatar1.png"
+	    };
+    
+        var profiles = [profile_shehroz, profile_saqib];
+    
+        profiles.forEach(function(profile){
+    	
+            var div = document.createElement("div");
+            div.className = "card";
+            div.style.width = 400 + "px";
+
+            var img = document.createElement("img");
+            img.className = "card-img-top";
+            img.setAttribute("src", profile.profile_img_source);
+
+            var div_child = document.createElement("div");
+            div_child.className = "card-body";
+
+            var h4 = document.createElement("h4");
+            h4.className = "card-title";
+            h4.innerHTML = profile.name;
+
+            var p = document.createElement("p");
+            p.className = "card-text";
+            p.innerHTML = profile.description;
+
+            var a = document.createElement("a");
+            a.className = "btn btn-primary";
+            a.innerHTML = "Check Profile";
+    
+
+            div_child.appendChild(h4);
+            div_child.appendChild(p);
+            div_child.appendChild(a);
+
+            div.appendChild(img);
+            div.appendChild(div_child);
+
+            document.getElementById("wrapper").appendChild(div);
+    });
+    }
+    
+
+</script>
+</body>
+</html>
