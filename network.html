@@ -11,10 +11,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="Footer-with-button-logo.css">
-    <link rel="stylesheet" href="profile.css">
-    <link rel="stylesheet" href="jobs.css">
-
+    <link rel="stylesheet" href="cssfiles/Footer-with-button-logo.css">
+    <link rel="stylesheet" href="cssfiles/profile.css">
+    <link rel="stylesheet" href="cssfiles/jobs.css">
+    <link href="cssfiles/login_css.css" rel="stylesheet" type="text/css">
    
 
 
@@ -97,16 +97,9 @@
 
 <body>
 
-  
   <nav class="navbar navbar-expand-sm  mynav">
     <!-- Brand -->
-    <a class="navbar-brand" href="#">Logo</a>
-
-
-    <form class="form-inline" action="/action_page.php">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-      <button class="btn btn-primary" type="submit">Search</button>
-    </form>
+    <img src="newlogo3.jpeg" alt="Logo" style="width:130px;height:100%; ">
     
     <!-- Links -->
     <ul class="navbar-nav ml-auto">
@@ -119,16 +112,16 @@
 
       
       <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="user_main.html">Home</a>
       </li>
 
      
 
       <li class="nav-item">
-        <a class="nav-link" href="#">Jobs</a>
+        <a class="nav-link" href="jobs.html">Jobs</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Network</a>
+        <a class="nav-link" href="network.html">Network</a>
       </li>
   
       <!-- Dropdown -->
@@ -140,30 +133,22 @@
           </button>
       
         <div class="dropdown-menu dropdown-menu-right menudropdown">
-          <a class="dropdown-item" href="#">Edit Profile</a>
-          <a class="dropdown-item" href="#">Invites<span class="badge badge-danger mx-2">4</span></a>
-          <a class="dropdown-item" href="#">Signout</a>
+          <a class="dropdown-item" href="profile.html">Edit Profile</a>
+          <a class="dropdown-item" href="network.html">Invites<span class="badge badge-danger mx-2">4</span></a>
+          <a class="dropdown-item" href="home.html">Signout</a>
         </div>
       </li>
-
-
-      
-
-
-
-
 
     </ul>
   </nav>
 
-
-  <div class="container " style="margin-top:30px">
+  <div class="container " style="margin-top:30px" >
         <div class="row">
           <div class="col-sm-1">
     
           </div>
   
-          <div class="col-sm-10 ">
+          <div class="col-sm-10 " >
                 <h1 class="text-center">
                         Expand your connections!
                     </h1>
@@ -188,15 +173,15 @@
 
 
 
-            <div class="row">
+            <div class="row" >
                     <div class="col-sm-10"> 
-                        <input type="text" class="form-control" id="usr" placeholder="Looking for Someone?">
+                        <input type="text" class="form-control" id="usrsearch" placeholder="Looking for Someone?">
                     </div>
                     <div class="col-sm-2">
-                            <button type="button" class="btn mt-1 btn-outline-primary">Search</button>
+                            <button type="button" class="btn mt-1 btn-outline-primary" onclick="searchPostListener()">Search</button>
                     </div>
                 </div>
-                <div class="row mt-2">
+                <div class="row mt-2" id="jobsappender">
                         <div class="col-sm-4">
                          
                             
@@ -349,6 +334,174 @@
 
 
 <script>
+var nuces_id=0;
+
+class profile{
+constructor(name,dp,designation){
+/*   post_maker = "saqib",
+  post_text= "hello my first post",
+  post_image= "bg1.jpg",
+  post_image_caption ="Image caption",
+  post_date="9/3/2019",
+  post_time="13:55" */
+
+  this.nuces_profile_id = nuces_id;
+  this.profile_name=name;
+  this.profile_designation=designation;
+  this.post_dp= dp;
+  nuces_id++;
+
+}
+
+
+getName() {
+      return this.profile_name;
+    }
+
+    getProfile() {
+      return this;
+    }
+
+}
+
+var post1= new profile ("Saqib","bg12.jpg","Student at FAST")
+var post2= new profile ("Sheroz","bg13.jpg","Student at LUMS")
+var post3= new profile ("Khan","biglogo.png","Student at UET")
+var post4= new profile ("Imran","imran.jpeg","Developer at Home")
+var post5= new profile ("Ali","bg8.jpg","Student at GCU")
+var post6= new profile ("Atif","bg12.jpg","Student at FAST")
+var post7= new profile ("Shaan","bg13.jpg","Student at LUMS")
+var post8= new profile ("Anwar","bg2.jpg","Student at UET")
+var post9= new profile ("Ayesha","bg15.jpg","Developer at Home")
+var post10= new profile ("Maryam","bg8.jpg","Student at GCU")
+
+var allposts= [post1,post2,post3,post4,post5,post6,post7,post8,post9,post10];
+
+
+function searchPostListener() {
+    var keyword = document.getElementById("usrsearch").value;
+    if(keyword.length == 0) {
+      alert("field must not be empty");
+    }
+    else {
+      var regex = new RegExp(keyword, "gi");
+      allposts.forEach(function(post){
+        var result = regex.test(post.getName());
+        if(result) {
+          console.log(post);
+          postHtml = '<div class="col-sm-4">\
+                            <div class="card" id="'+post.nuces_profile_id+'">\
+                                    <img class="card-img-top mx-auto d-block img-fluid mt-2" src="'+post.post_dp+'" alt="Card image" style="height: 150px;width:150px;border:0px solid black;border-radius: 100%;" >\
+                              <div class="card-body">\
+                                <h4 class="card-title text-center">'+ post.profile_name+'</h4>\
+                                <p class="card-text text-center">'+ post.profile_designation+'</p>\
+                                 <a href="#" class="btn btn-primary">View Profile</a>\
+                                <!-- <a href="#" class="btn btn-primary jobbutton1">View Profile</a> -->\
+                                <!-- <div class="container jobcard1 mt-2" >\
+                                  <h6>Experience :</h6>\
+                                  <p>\
+                                    Minimum 2 years\
+                                  </p>\
+                                  <h6>Qualification : </h6>\
+                                  <p>\
+                                    Minimum 2 years\
+                                  </p>\
+                                  <h6>Vacancies : </h6>\
+                                  <p>\
+                                    2\
+                                  </p>\
+                                  <h6>Location : </h6>\
+                                  <p>\
+                                    Lahore\
+                                  </p>\
+                                </div> -->\
+                                <a href="#" class="btn btn-success applybutton">Connect</a>\
+                                <div class="alert alert-success jobalert">\
+                                  <strong>Success!</strong> Friend Invitation Sent!\
+                                </div>\
+                              </div>\
+                            </div>\
+                          </div>\
+                          '
+        $("#jobsappender").append(postHtml);
+        }
+      });
+    }
+  }
+
+
+
+
+function loadPosts() {
+
+if ($(window).height() + $(window).scrollTop() > $(document).height() - 100) {
+  allposts.forEach(function(post){
+        postHtml = '<div class="col-sm-4">\
+                            <div class="card" id="'+post.nuces_profile_id+'">\
+                                    <img class="card-img-top mx-auto d-block img-fluid mt-2" src="'+post.post_dp+'" alt="Card image" style="height: 150px;width:150px;border:0px solid black;border-radius: 100%;" >\
+                              <div class="card-body">\
+                                <h4 class="card-title text-center">'+ post.profile_name+'</h4>\
+                                <p class="card-text text-center">'+ post.profile_designation+'</p>\
+                                 <a href="#" class="btn btn-primary">View Profile</a>\
+                                <!-- <a href="#" class="btn btn-primary jobbutton1">View Profile</a> -->\
+                                <!-- <div class="container jobcard1 mt-2" >\
+                                  <h6>Experience :</h6>\
+                                  <p>\
+                                    Minimum 2 years\
+                                  </p>\
+                                  <h6>Qualification : </h6>\
+                                  <p>\
+                                    Minimum 2 years\
+                                  </p>\
+                                  <h6>Vacancies : </h6>\
+                                  <p>\
+                                    2\
+                                  </p>\
+                                  <h6>Location : </h6>\
+                                  <p>\
+                                    Lahore\
+                                  </p>\
+                                </div> -->\
+                                <a href="#" class="btn btn-success applybutton">Connect</a>\
+                                <div class="alert alert-success jobalert">\
+                                  <strong>Success!</strong> Friend Invitation Sent!\
+                                </div>\
+                              </div>\
+                            </div>\
+                          </div>\
+                          '
+        $("#jobsappender").append(postHtml);
+  });
+ }
+}
+
+
+
+
+
+$(function () {
+loadPosts();
+});
+
+$(window).on('scroll', function (event) {
+loadPosts();
+})
+
+$(document).ready(function(){
+
+$(".jobbutton1").click(function(){
+  $(".jobcard1").toggle(500);
+});
+
+
+
+$(".applybutton").click(function(){
+ 
+  alert("You have successfully sent friend request!");
+
+});
+});
+
 
 
 

@@ -245,3 +245,17 @@
     color: #f4511e;
     background-color: green;
   }
+
+
+
+
+div.mywelcome{
+  
+  background-color:rgba(17, 39, 94, 0.8);
+  border:0px solid black;
+  box-shadow: 31px -9px 300px 32px rgba(255,255,255,1);
+  border-radius: 0;
+  color:white;
+  font-size:150%;
+}
+

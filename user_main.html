@@ -11,8 +11,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="Footer-with-button-logo.css">
-    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="cssfiles/Footer-with-button-logo.css">
+    <link rel="stylesheet" href="cssfiles/profile.css">
+    <link rel="stylesheet" href="cssfiles/jobs.css">
+    <link href="cssfiles/login_css.css" rel="stylesheet" type="text/css">
 
    
 
@@ -95,64 +97,48 @@
 <body>
 
     
-    <nav class="navbar navbar-expand-sm  mynav">
-        <!-- Brand -->
-        <a class="navbar-brand" href="#">Logo</a>
-    
-    
-        <form class="form-inline" action="/action_page.php">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-primary" type="submit">Search</button>
-        </form>
+  <nav class="navbar navbar-expand-sm  mynav">
+      <img src="newlogo3.jpeg" alt="Logo" style="width:130px;height:100%; ">
+    <!-- Links -->
+    <ul class="navbar-nav ml-auto">
         
-        <!-- Links -->
-        <ul class="navbar-nav ml-auto">
-            
-    
-             
-          
-    
-    
-    
-          
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-    
-         
-    
-          <li class="nav-item">
-            <a class="nav-link" href="#">Jobs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Network</a>
-          </li>
-      
-          <!-- Dropdown -->
-          <li class="nav-item dropdown">
-           
-            
-            <button type="button" class="btn btn-primary nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Me
-              </button>
-          
-            <div class="dropdown-menu dropdown-menu-right menudropdown">
-              <a class="dropdown-item" href="#">Edit Profile</a>
-              <a class="dropdown-item" href="#">Invites<span class="badge badge-danger mx-2">4</span></a>
-              <a class="dropdown-item" href="#">Signout</a>
-            </div>
-          </li>
-    
-    
-          
-    
-    
-    
-    
-    
-        </ul>
-      </nav>
 
+         
+      
+
+
+
+      
+      <li class="nav-item">
+        <a class="nav-link" href="user_main.html">Home</a>
+      </li>
+
+     
+
+      <li class="nav-item">
+        <a class="nav-link" href="jobs.html">Jobs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="network.html">Network</a>
+      </li>
+  
+      <!-- Dropdown -->
+      <li class="nav-item dropdown">
+       
+        
+        <button type="button" class="btn btn-primary nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Me
+          </button>
+      
+        <div class="dropdown-menu dropdown-menu-right menudropdown">
+          <a class="dropdown-item" href="profile.html">Edit Profile</a>
+          <a class="dropdown-item" href="network.html">Invites<span class="badge badge-danger mx-2">4</span></a>
+          <a class="dropdown-item" href="home.html">Signout</a>
+        </div>
+      </li>
+
+    </ul>
+  </nav>
 
 <!-- 
    Navbar 
@@ -216,7 +202,7 @@
                 <div class="card-body">
                   <h3 class="card-title  text-center">Syed Saqib</h3>
                   <p class="card-text  text-center">Student at National University of Computing and Emerging Sciences</p>
-                  <div class=""><a href="#" class="btn btn-primary ">See Profile</a></div>
+                  <div class="text-center"><a href="profile.html" class="btn btn-outline-success m-2 ">Edit Profile</a></div>
                 </div>
             </div>
         </div>
@@ -232,7 +218,7 @@
                 
                 </div>
 
-                <!-- <div class="friendpost">
+                 <div class="friendpost">
                         <div class="mydiv1 p-4 my-4">
                          
                             <div>
@@ -322,7 +308,7 @@
                                   <a href="#" class="btn btn-primary btn-sm mx-2">Post</a>  
                               </div>
                    </div>
-                 </div> -->
+                 </div> 
 
 
       </div>
@@ -357,6 +343,12 @@
 
 
 <script type="text/javascript">
+
+
+
+var p_id=0;
+
+
     $(document).ready(function(){
       fetchData();
 
@@ -425,6 +417,8 @@ function InfiniteScroll() {
   this.post_image_caption =image_caption;
   this.post_date=date;
   this.post_time=time;
+  this.post_id=p_id;
+        p_id++;
 }
 
 var post1= new post ("Saqib","bg12.jpg","Student at FAST","Hello this is my first post","bg1.jpg","Test image caption","9/3/2019","13:55")
