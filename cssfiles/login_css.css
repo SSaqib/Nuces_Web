@@ -14,7 +14,8 @@
           }
 
           .myc1{
-            background-color:rgba(0, 0, 0, 0.6) !important;
+            
+            background-color:rgba(0, 0, 0, 0.9) !important;
             
           }
          
@@ -256,6 +257,28 @@ div.mywelcome{
   box-shadow: 31px -9px 300px 32px rgba(255,255,255,1);
   border-radius: 0;
   color:white;
-  font-size:150%;
+ max-width:100% ;
 }
+/* 
+@media screen and (max-width: 320px) {
+ 
+ .mycon
+  {
+    font-size: 25% !important;
+   
+  }
 
+  
+  }
+
+  .mycon h1{
+    font-size:5vw !important;
+  }
+  
+  .mycon h5{
+    font-size:3vw !important;
+  }
+  
+  .mycon h6{
+    font-size:1vw !important;
+  } */

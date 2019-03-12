@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="cssfiles/Footer-with-button-logo.css">
     <link rel="stylesheet" href="cssfiles/profile.css">
     <link rel="stylesheet" href="cssfiles/jobs.css">
+    <link rel="stylesheet" href="cssfiles/network.css">
     <link href="cssfiles/login_css.css" rel="stylesheet" type="text/css">
    
 
@@ -178,9 +179,43 @@
                         <input type="text" class="form-control" id="usrsearch" placeholder="Looking for Someone?">
                     </div>
                     <div class="col-sm-2">
-                            <button type="button" class="btn mt-1 btn-outline-primary" onclick="searchPostListener()">Search</button>
+                            <button type="button" class="btn mt-1 btn-outline-primary" id="mysearchbutton" onclick="searchPostListener()">Search</button>
                     </div>
                 </div>
+
+                <div class="row mt-2" id="searchappender">
+                  <div class="col-sm-2">
+ 
+                    </div>
+
+                    <div class="col-sm-8 text-center p-4">
+                   
+                      <h2 class="matchedconn" id ="matchedconn1">Matched Connections</h2>
+                      
+                    </div>
+
+
+                    <div class="col-sm-2">
+                   
+                     
+                    </div>
+
+
+
+
+
+                
+
+
+
+              </div> 
+              
+              <div class="row mt-2" id="searchappender2">
+        
+            </div>
+              
+              
+
                 <div class="row mt-2" id="jobsappender">
                         <div class="col-sm-4">
                          
@@ -365,14 +400,14 @@ getName() {
 }
 
 var post1= new profile ("Saqib","bg12.jpg","Student at FAST")
-var post2= new profile ("Sheroz","bg13.jpg","Student at LUMS")
+var post2= new profile ("Ali","bg13.jpg","Student at LUMS")
 var post3= new profile ("Khan","biglogo.png","Student at UET")
 var post4= new profile ("Imran","imran.jpeg","Developer at Home")
 var post5= new profile ("Ali","bg8.jpg","Student at GCU")
 var post6= new profile ("Atif","bg12.jpg","Student at FAST")
 var post7= new profile ("Shaan","bg13.jpg","Student at LUMS")
 var post8= new profile ("Anwar","bg2.jpg","Student at UET")
-var post9= new profile ("Ayesha","bg15.jpg","Developer at Home")
+var post9= new profile ("Ali","bg15.jpg","Developer at Home")
 var post10= new profile ("Maryam","bg8.jpg","Student at GCU")
 
 var allposts= [post1,post2,post3,post4,post5,post6,post7,post8,post9,post10];
@@ -384,12 +419,17 @@ function searchPostListener() {
       alert("field must not be empty");
     }
     else {
+      $("#searchappender").empty();
+      $("#searchappender2").empty();
+      $("#jobappenders").empty();
+      $("#matchedconn1").show();
       var regex = new RegExp(keyword, "gi");
       allposts.forEach(function(post){
         var result = regex.test(post.getName());
         if(result) {
           console.log(post);
-          postHtml = '<div class="col-sm-4">\
+          postHtml = '\
+          <div class="col-sm-4">\
                             <div class="card" id="'+post.nuces_profile_id+'">\
                                     <img class="card-img-top mx-auto d-block img-fluid mt-2" src="'+post.post_dp+'" alt="Card image" style="height: 150px;width:150px;border:0px solid black;border-radius: 100%;" >\
                               <div class="card-body">\
@@ -423,9 +463,17 @@ function searchPostListener() {
                             </div>\
                           </div>\
                           '
-        $("#jobsappender").append(postHtml);
+        $("#searchappender").append(postHtml);
         }
       });
+
+      nexthtml='\  <div class="col-sm-2"></div>\
+                    <div class="col-sm-8 text-center p-4">\
+                      <h2 class="matchedconn2">Other Connections</h2>  </div>\
+                    <div class="col-sm-2"></div>\
+              '
+              $("#searchappender2").append(nexthtml);
+              loadPosts();
     }
   }
 
@@ -433,8 +481,8 @@ function searchPostListener() {
 
 
 function loadPosts() {
-
-if ($(window).height() + $(window).scrollTop() > $(document).height() - 100) {
+  
+ if ($(window).height() + $(window).scrollTop() > $(document).height() - 100) {
   allposts.forEach(function(post){
         postHtml = '<div class="col-sm-4">\
                             <div class="card" id="'+post.nuces_profile_id+'">\
@@ -472,7 +520,8 @@ if ($(window).height() + $(window).scrollTop() > $(document).height() - 100) {
                           '
         $("#jobsappender").append(postHtml);
   });
- }
+ } 
+ 
 }
 
 
